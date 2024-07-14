@@ -1,7 +1,8 @@
 services:
   cli:
-    build: ./cli
-    image: evgeniy-khyst/letsencrypt-docker-compose-cli
+    build: 
+      context: ./cli
+    # image: evgeniy-khyst/letsencrypt-docker-compose-cli
     user: ${CURRENT_USER}
     group_add:
       - ${DOCKER_GROUP}
